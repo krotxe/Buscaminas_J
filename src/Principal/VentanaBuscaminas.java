@@ -50,10 +50,7 @@ public class VentanaBuscaminas extends javax.swing.JFrame {
                 }
                 arrayBotones[i][j].numeroMinasAlrededor = minas;
                 minas = 0;
-                if ((arrayBotones[i][j].numeroMinasAlrededor > 0) &&
-                    (arrayBotones[i][j].bomba == 0)){
-                    arrayBotones[i][j].setText(String.valueOf(arrayBotones[i][j].numeroMinasAlrededor));
-                }
+                
             }
         }
         
@@ -104,6 +101,11 @@ public class VentanaBuscaminas extends javax.swing.JFrame {
            miBoton.setText("BOOM");
             
         }
+        
+        if ((miBoton.numeroMinasAlrededor > 0) &&
+                    (miBoton.bomba == 0)){
+                    miBoton.setText(String.valueOf(miBoton.numeroMinasAlrededor));
+                }
             //si es una bomba --> explota y se acaba la partida
             
             //declaro un arraylist para ir guardando la lista de botones
